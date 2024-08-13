@@ -19,7 +19,7 @@ sp = spotipy.Spotify(auth_manager=auth_manager)
 min_followers = int(sys.argv[1])  # sys.argv[0] is the script name, so start with sys.argv[1]
 max_followers = int(sys.argv[2])
 
-def search_artists_with_few_followers(keyword, min_followers, max_followers):
+def search_for_artists(keyword, min_followers, max_followers):
     results = sp.search(q=keyword, type='artist', limit=50)
     artists = results['artists']['items']
     
@@ -33,5 +33,5 @@ def search_artists_with_few_followers(keyword, min_followers, max_followers):
     if not found_artist:
         print("No artists found within the specified follower range.")
 
-# Example usage
-search_artists_with_few_followers(keyword='indie', min_followers=min_followers, max_followers=max_followers)
+# main program
+search_for_artists(keyword='indie', min_followers=min_followers, max_followers=max_followers)

@@ -1,4 +1,4 @@
 # spotifySearch
 
-Run using:
-python3 spotifySearch.py <min_followers> <max_followers>
+Run cmd:
+python3 main.py
